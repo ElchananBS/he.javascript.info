@@ -11,29 +11,38 @@ The programs in this language are called *scripts*. They can be written right in
 קטעי התוכנה בשפה נקראים *סקריפטים*. הם יכולים להיכתב ישירות בHTML ולרוץ מיד כאשר העמוד עולה. 
 
 Scripts are provided and executed as plain text. They don't need special preparation or compilation to run.
-סקריפטים מסופקים ומוצאים לפועל כטקסט רגיל. הם לא צריכים הכנות מיוחדות דוגמת קומפילציה כדי לרוץ.
+סקריפטים מסופקים ומפורשים כטקסט שהם. הם לא צריכים הכנות מיוחדות דוגמת [קומפילציה](https://he.wikipedia.org/wiki/%D7%9E%D7%94%D7%93%D7%A8) כדי לרוץ.
 
-In this aspect, JavaScript is very different from another language called [Java](https://en.wikipedia.org/wiki/Java_(programming_language)).
+In this aspect, JavaScript is very different from another language called [Java](https://en.wikipedia.org/wiki/Java_(programming_language)).\
+במובן הזה, ג'אווהסקריפט שונה מאד משפה אחרת הנקראת [ג'אווה](https://he.wikipedia.org/wiki/%D7%92%27%D7%90%D7%95%D7%95%D7%94_(%D7%A9%D7%A4%D7%AA_%D7%AA%D7%9B%D7%A0%D7%95%D7%AA)).
 
-```smart header="Why is it called <u>Java</u>Script?"
+```smart header="Why is it called <u>Java</u>Script?\ מדוע היא נקראת <u>ג'אווה</u>סקריפט?"
 When JavaScript was created, it initially had another name: "LiveScript". But Java was very popular at that time, so it was decided that positioning a new language as a "younger brother" of Java would help.
-
-But as it evolved, JavaScript became a fully independent language with its own specification called [ECMAScript](http://en.wikipedia.org/wiki/ECMAScript), and now it has no relation to Java at all.
+כשג'אווהסקריפט נוצרה, היה לה שם אחר: "LiveScript" . אבל ג'אווה היתה מאד פופולרית בזמנו, אז הוחלט שהצגת השפה החדשה כאחיה הקטן של ג'אווה תהיה דבר מועיל.\
+But as it evolved, JavaScript became a fully independent language with its own specification called [ECMAScript](http://en.wikipedia.org/wiki/ECMAScript), and now it has no relation to Java at all.\
+אבל עם התפתחות השפה, ג'אווהסקריפט נהייתה עצמאית לחלוטין עם מפרט סטנדרטים (ספציפיקציה) משלה, הנקרא [ECMAScript](http://he.wikipedia.org/wiki/ECMAScript), וכיום כבר אין לה קשר עם ג'אווה.
 ```
 
-Today, JavaScript can execute not only in the browser, but also on the server, or actually on any device that has a special program called [the JavaScript engine](https://en.wikipedia.org/wiki/JavaScript_engine).
+Today, JavaScript can execute not only in the browser, but also on the server, or actually on any device that has a special program called [the JavaScript engine](https://en.wikipedia.org/wiki/JavaScript_engine).\
+כיום, ג'אווה סקריפט רצה לא רק על גבי הדפדפן, אלא גם על השרת, ולמעשה בכל מכשיר שמותקנת בו תוכנה מיוחדת הנקראת מנוע ג'אווהסקריפט
 
-The browser has an embedded engine sometimes called a "JavaScript virtual machine".
+The browser has an embedded engine sometimes called a "JavaScript virtual machine".\
+לכל סוג של דפדפן יש מנוע כזה שמוטמע בו, ולפעמים הוא מכונה "מוכנה וירטואלית של ג'אווהסקריפט".
 
-Different engines have different "codenames". For example:
+Different engines have different "codenames". For example:\
+למנועים שונים יש "שמות קוד" שונים. לדוגמה:\
 
-- [V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)) -- in Chrome and Opera.
-- [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- in Firefox.
+- [V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)) -- in Chrome and Opera.\
+- [V8](https://he.wikipedia.org/wiki/V8) -- בכרום ואופרה
+- [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- in Firefox.\
+- [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- בפיירפוקס.
 - ...There are other codenames like "Trident" and "Chakra" for different versions of IE, "ChakraCore" for Microsoft Edge, "Nitro" and "SquirrelFish" for Safari, etc.
+- יש שמות קוד נוספים, כמו "Trident" ו"Chakra" לגרסאות שונות של אינטרנט אקספלורר, "ChakraCore" בשביל מיקרוספוט אדג', "Nitro" ו- "SquirrelFish" בשביל סאפרי, וכו'.
 
 The terms above are good to remember because they are used in developer articles on the internet. We'll use them too. For instance, if "a feature X is supported by V8", then it probably works in Chrome and Opera.
+כדאי לזכור את המונחים לעיל, מאחר ומשתמשים בהם במאמרים שונים באינטרנט הנוגעים לפיתוח. גם אנחנו נשתמש בהם. לדוגמה, אם "תכונה X נתמכת על ידי V8", אז כנראה שזה עובד בכרום ואופרה.
 
-```smart header="How do engines work?"
+```smart header="How do engines work? \ איך מנועים עובדים?"
 
 Engines are complicated. But the basics are easy.
 
@@ -41,7 +50,11 @@ Engines are complicated. But the basics are easy.
 2. Then it converts ("compiles") the script to the machine language.
 3. And then the machine code runs, pretty fast.
 
-The engine applies optimizations at each step of the process. It even watches the compiled script as it runs, analyzes the data that flows through it, and further optimizes the machine code based on that knowledge.
+The engine applies optimizations at each step of the process. It even watches the compiled script as it runs, analyzes the data that flows through it, and further optimizes the machine code based on that knowledge.\
+מנועים מסובכים, אבל העקרון פשוט.
+1. המנוע (המוטמע, אם מדובר בדפדפן) קורא ("מנתח") את הסקריפט.
+2. אז הוא ממיר ("מהדר") את הסקריפט לשפת מכונה.
+3. ואז קוד המוכנה רץ, במהירות
 ```
 
 ## What can in-browser JavaScript do?
